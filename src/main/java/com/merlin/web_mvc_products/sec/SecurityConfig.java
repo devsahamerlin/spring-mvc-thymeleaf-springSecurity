@@ -34,4 +34,5 @@ public class SecurityConfig {
                 User.withUsername("admin").password(passwordEncoder().encode("1234")).roles("USER","ADMIN").build()
         );
     }
+
 }
