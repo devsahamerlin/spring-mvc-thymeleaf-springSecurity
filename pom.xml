@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.merlin</groupId>
-	<artifactId>web-mvc-products</artifactId>
+	<artifactId>spring-mvc-thymeleaf-springSecurity</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>web-mvc-products</name>
 	<description>Demo project for Spring Boot</description>
