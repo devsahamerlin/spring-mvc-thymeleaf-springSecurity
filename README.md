@@ -4,6 +4,8 @@ Java web application based on Spring, Spring Data JPA, Hibernate, Tymeleaf and S
 
 This Spring MVC application provides a comprehensive product management app with role-based access control. The system supports both USER and ADMIN roles with different levels of access to various features.
 
+![run.gif](images/run.gif)
+
 ## Features Overview
 
 ### Product Search & Filtering

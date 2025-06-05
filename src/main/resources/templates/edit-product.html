@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout1"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Product</title>
+</head>
+<body>
+<div class="p-3" layout:fragment="content1">
+    <h2>Edit Product</h2>
+    <form method="post" th:action="@{/admin/updateProduct}">
+        <input type="hidden" name="id" th:value="${product.id}">
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input class="form-control" type="text" name="name" th:value="${product.name}">
+            <span class="text-danger" th:errors="${product.name}"></span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Price</label>
+            <input class="form-control" type="text" name="price" th:value="${product.price}">
+            <span class="text-danger" th:errors="${product.price}"></span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Quantity</label>
+            <input class="form-control" type="text" name="quantity" th:value="${product.quantity}">
+            <span class="text-danger" th:errors="${product.quantity}"></span>
+        </div>
+        <button type="submit" class="btn btn-success">Update</button>
+        <a class="btn btn-secondary" th:href="@{/user/index}">Cancel</a>
+    </form>
+</div>
+</body>
+</html>
