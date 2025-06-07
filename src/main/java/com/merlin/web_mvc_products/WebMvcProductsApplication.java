@@ -5,11 +5,13 @@ import com.merlin.web_mvc_products.repository.ProductRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 
 import java.util.UUID;
 
-@SpringBootApplication
+//@SpringBootApplication
+@SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 public class WebMvcProductsApplication {
 
     public static void main(String[] args) {
@@ -28,6 +30,7 @@ public class WebMvcProductsApplication {
                     .name("HP Pavilion x360")
                     .price(5400)
                     .quantity(12)
+                    .selected(true)
                     .build());
 
             productRepository.save(Product.builder()
@@ -42,6 +45,7 @@ public class WebMvcProductsApplication {
                     .name("Asus ROG Zephyrus G16")
                     .price(14500)
                     .quantity(8)
+                    .selected(true)
                     .build());
 
             productRepository.save(Product.builder()
@@ -77,6 +81,7 @@ public class WebMvcProductsApplication {
                     .name("Xiaomi Redmi Note 13")
                     .price(250)
                     .quantity(5)
+                    .selected(true)
                     .build());
 
             System.out.println("5 Produits disponibles dans la BD:");
