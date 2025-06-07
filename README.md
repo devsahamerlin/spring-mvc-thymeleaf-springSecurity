@@ -6,6 +6,13 @@ This Spring MVC application provides a comprehensive product management app with
 
 ![run.gif](images/run.gif)
 
+## Rest API Docs: http://localhost:8080/swagger-ui/index.html
+
+- http://localhost:8080/api/products
+- http://localhost:8080/api/products/search/price?minPrice=500&maxPrice=2000
+- http://localhost:8080/api/products/search/stock
+- http://localhost:8080/api/products/search/stock?threshold=20
+
 ## Features Overview
 
 ### Product Search & Filtering
